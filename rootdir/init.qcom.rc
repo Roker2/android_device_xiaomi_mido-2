@@ -640,7 +640,7 @@ service fingerprintd /system/bin/fingerprintd
 service gx_fpd /system/bin/gx_fpd
      class core
      user root
-     group system system
+     group system
      writepid /dev/cpuset/system-background/tasks
 
 on property:sys.fp.vendor=switchf
