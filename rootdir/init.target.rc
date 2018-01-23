@@ -193,11 +193,13 @@ service hvdcp_opti /system/bin/hvdcp_opti
 on property:init.svc.dts_configurator=stopped
     start dtseagleservice
 
+#Disable for LuneOS Testing
 service per_mgr /system/bin/pm-service
     class core
     user system
     group system
     writepid /dev/cpuset/system-background/tasks
+    disabled
 
 service per_proxy /system/bin/pm-proxy
     class core
