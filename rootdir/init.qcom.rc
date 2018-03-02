@@ -622,6 +622,7 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     user system
     group system
     writepid /dev/cpuset/system-background/tasks
+    disabled
 
 on charger
     load_system_props
