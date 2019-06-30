@@ -273,4 +273,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Ubuntu Touch Files
 ##
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ubuntu/70-android.rules:system/halium/lib/udev/rules.d/70-android.rules
+    $(LOCAL_PATH)/ubuntu/70-android.rules:system/halium/lib/udev/rules.d/70-android.rules \
+    $(LOCAL_PATH)/ubuntu/timekeeper.conf:system/halium/etc/init/timekeeper.conf
