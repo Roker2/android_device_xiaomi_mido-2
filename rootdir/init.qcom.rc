@@ -420,8 +420,16 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
 	# first boot
 	start init_setup_firstboot
+	# wlan/bt init
+	start init_wlan_bt
 	
 service init_setup_firstboot /system/bin/sh /system/etc/init_setup_first_boot.sh
+    class main
+    user root
+    group root
+    oneshot
+	
+service init_wlan_bt /system/bin/sh /system/etc/init_hcismd_up.sh
     class main
     user root
     group root
