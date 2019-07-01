@@ -281,6 +281,7 @@ PRODUCT_PACKAGES += \
     libcameraservice_32 \
     libdroidmedia_32 \
     libcamera_compat_layer_32 \
+    libmedia_compat_layer_32 \
     libui_compat_layer_32 \
     libsf_compat_layer_32 \
     minimediaservice \
