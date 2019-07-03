@@ -1,6 +1,7 @@
 #!/bin/sh
 
 ## From bitrvmpd's SailfishOS port
+## Modified by asriel-danctnix (for ubports-santoni)
 
 # Maximum number of attempts to enable hcismd to try to get
 # hci0 to come online.  Writing to sysfs too early seems to
@@ -20,7 +21,6 @@ while [ ! $i -gt $MAXTRIES ]  ; do
     echo 1 > /sys/module/hci_smd/parameters/hcismd_set
     if [ -e /sys/class/bluetooth/hci0 ] ; then
         rfkill unblock all
-        hciconfig hci0 up
         # found hci0, exit successfully
         echo 0 > /sys/module/hci_smd/parameters/hcismd_set
         bt_mac=$(/system/bin/hci_qcomm_init -e -p 2 -P 2 -d /dev/ttyHSL0 2>1 | grep -oP '([0-9a-f]{2}:){5}([0-9a-f]{2})')
@@ -39,4 +39,3 @@ while [ ! $i -gt $MAXTRIES ]  ; do
     fi
 done
 rfkill unblock all
-hciconfig hci0 up
