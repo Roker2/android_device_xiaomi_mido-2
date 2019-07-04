@@ -419,7 +419,7 @@ on property:sys.boot_completed=1
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
     # set chmod for vibrator
-    chmod 0660 /sys/class/timed_output/vibrator/enable
+    chmod 0666 /sys/class/timed_output/vibrator/enable
     # wlan/bt init
     start init_wlan_bt
 	
