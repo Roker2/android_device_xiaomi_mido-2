@@ -305,4 +305,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/init_setup_first_boot.sh:system/etc/init_setup_first_boot.sh \
     $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh \
     $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/halium/var/lib/lxc/android/pre-start.d/init_hcismd_up.sh \
-    $(LOCAL_PATH)/ubuntu/android-tools-adb.conf:system/halium/etc/init/android-tools-adb.conf
+    $(LOCAL_PATH)/ubuntu/android-tools-adb.conf:system/halium/etc/init/android-tools-adb.conf \
+    $(LOCAL_PATH)/ubuntu/powerd-config.xml:system/halium/usr/share/powerd/device_configs/config-default.xml
