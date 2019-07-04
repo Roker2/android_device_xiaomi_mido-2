@@ -272,9 +272,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
   camera.fifo.disable=1
 
-######################
-# Ubuntu Touch Files #
-######################
+################
+# Ubuntu Touch #
+################
+
+# Aethercast
+PRODUCT_PROPERTY_OVERRIDES += \
+    ubuntu.widi.supported=1
 
 PRODUCT_PACKAGES += \
     libubuntu_application_api \
