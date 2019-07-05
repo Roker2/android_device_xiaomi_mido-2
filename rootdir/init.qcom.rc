@@ -198,6 +198,7 @@ on boot
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/white/blink
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/blue/brightness
@@ -205,6 +206,7 @@ on boot
     chmod 0666 /sys/class/leds/red/blink
     chmod 0666 /sys/class/leds/green/blink
     chmod 0666 /sys/class/leds/blue/blink
+    chmod 0666 /sys/class/leds/white/blink
     chmod 0666 /sys/class/leds/red/brightness
     chmod 0666 /sys/class/leds/green/brightness
     chmod 0666 /sys/class/leds/blue/brightness
@@ -421,6 +423,20 @@ on property:sys.boot_completed=1
     write /sys/block/dm-1/queue/read_ahead_kb 512
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
+	
+    ## Had to run chmod commands here because something changed the permission after that
+    chmod 0666 /sys/class/leds/red/blink
+    chmod 0666 /sys/class/leds/green/blink
+    chmod 0666 /sys/class/leds/blue/blink
+    chmod 0666 /sys/class/leds/white/blink
+    chmod 0666 /sys/class/leds/red/brightness
+    chmod 0666 /sys/class/leds/green/brightness
+    chmod 0666 /sys/class/leds/blue/brightness
+    chmod 0666 /sys/class/leds/white/brightness
+	
+    # Vibrator
+    chmod 0666 /sys/class/timed_output/vibrator/enable
+	
     # wlan/bt init
     start init_wlan_bt
 	
