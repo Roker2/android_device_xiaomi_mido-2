@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
+    audio_policy.msm8953 \
     audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
@@ -308,6 +309,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/servicemanager.rc:system/etc/init/servicemanager.rc \
     $(LOCAL_PATH)/ubuntu/init_setup_first_boot.sh:system/etc/init_setup_first_boot.sh \
     $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh \
-    $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/halium/var/lib/lxc/android/pre-start.d/init_hcismd_up.sh \
     $(LOCAL_PATH)/ubuntu/android-tools-adb.conf:system/halium/etc/init/android-tools-adb.conf \
     $(LOCAL_PATH)/ubuntu/powerd-config.xml:system/halium/usr/share/powerd/device_configs/config-default.xml
