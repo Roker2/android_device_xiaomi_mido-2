@@ -184,3 +184,8 @@ ro.sys.fw.trim_enable_memory=2147483648
 
 # Wifi
 wifi.interface=wlan0
+
+# Settings for droidmedia
+camera.fifo.disable=1
+persist.camera.shutter.disable=1
+persist.media.metrics.enabled=0
