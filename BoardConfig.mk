@@ -223,5 +223,8 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 #WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+#allow arm64 libhybris
+HYBRIS_MEDIA_32_BIT_ONLY := false
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/mido/BoardConfigVendor.mk
