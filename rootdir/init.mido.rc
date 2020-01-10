@@ -25,6 +25,16 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+
+service logcat_charger /system/bin/logcat -b all -f /cache/logcat.txt -v threadtime
+    class main
+    user root
+    group system
+    disabled
+
+on charger	on charger
+    start logcat_charger
+
 on boot
 
     # Fingerprint
