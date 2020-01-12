@@ -282,6 +282,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.t-o.quirk.forcesink=sink.primary_output \
     ro.t-o.quirk.forcesource=source.primary_input
 
+# droidmedia doesn't support HAL3 yet
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.camera.HAL3.enabled=0
+
 # Aethercast
 PRODUCT_PROPERTY_OVERRIDES += \
     ubuntu.widi.supported=1
