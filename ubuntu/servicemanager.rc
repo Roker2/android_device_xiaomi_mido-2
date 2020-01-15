@@ -22,6 +22,8 @@ service minimedia /system/bin/minimediaservice
     user media
     group audio camera
     ioprio rt 4
+    # hacky workaround for video decoding
+    setenv LD_PRELOAD /system/lib/libOmxVdec.so
 
 service minisf /system/bin/minisfservice
     class main
