@@ -433,6 +433,14 @@ on property:sys.boot_completed=1
 	
     # Vibrator
     chmod 0666 /sys/class/timed_output/vibrator/enable
+
+    # Torch (seeing nothing, nothing but myself.. and i'm the one with a lighter)
+    chmod 0666 /sys/class/leds/led\:switch/brightness
+    chmod 0666 /sys/class/leds/torch-light0/brightness
+    chmod 0666 /sys/class/leds/torch-light1/brightness
+
+    # GPS
+    setprop custom.location.testing true
 	
     # wlan/bt init
     start init_wlan_bt
