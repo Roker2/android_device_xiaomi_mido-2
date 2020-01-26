@@ -134,6 +134,12 @@
   /sys/devices/system/cpu/online r,
   /sys/devices/soc0/soc_id r,
   /sys/devices/soc/1a00000.qcom,mdss_mdp/caps r,
+  @{HOME}/** rw,
+  /dev/disk/by-label/ r,
+  /opt/** r,
+  /etc/passwd r,
+  /etc/nsswitch.conf r,
+  /var/lib/extrausers/passwd r,
 
   # glibc's *printf protections read the maps file
   @{PROC}/@{pid}/maps            r,
