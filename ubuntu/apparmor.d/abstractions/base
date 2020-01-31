@@ -127,19 +127,22 @@
   @{PROC}/meminfo                r,
   @{PROC}/stat                   r,
   @{PROC}/cpuinfo                r,
-  @{PROC}/vmstat                 r,
-  @{PROC}/@{pid}/loginuid r,
-  @{PROC}/@{pid}/task/@{tid}/status r,
-  @{PROC}/@{pid}/mounts r,
   /sys/devices/system/cpu/online r,
-  /sys/devices/soc0/soc_id r,
+
+  # Currently, AppArmor does not work properly yet, so this is a list of
+  # things to be whitelisted:
+  @{PROC}/vmstat                 r,
+  @{PROC}/@{pid}/loginuid        r,
+  @{PROC}/@{pid}/task/@{tid}/status r,
+  @{PROC}/@{pid}/mounts          r,
+  /sys/devices/soc0/soc_id       r,
   /sys/devices/soc/1a00000.qcom,mdss_mdp/caps r,
-  @{HOME}/** rw,
-  /dev/disk/by-label/ r,
-  /opt/** r,
-  /etc/passwd r,
-  /etc/nsswitch.conf r,
-  /var/lib/extrausers/passwd r,
+  @{HOME}/**                     rw,
+  /dev/disk/by-label/            r,
+  /opt/**                        r,
+  /etc/passwd                    r,
+  /etc/nsswitch.conf             r,
+  /var/lib/extrausers/passwd     r,
 
   # glibc's *printf protections read the maps file
   @{PROC}/@{pid}/maps            r,
