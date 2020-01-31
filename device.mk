@@ -284,7 +284,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # telepathy-ofono quirks
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.t-o.quirk.forcesink=sink.primary_output \
-    ro.t-o.quirk.forcesource=source.primary_input
+    ro.t-o.quirk.forcesource=source.surround_sound_primary_input
 
 # droidmedia doesn't support HAL3 yet
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
