@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2020 Dreemurrs Embedded Labs
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -290,9 +291,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0
 
-# Aethercast
-PRODUCT_PROPERTY_OVERRIDES += \
-    ubuntu.widi.supported=1
+# Aethercast is currently disabled due to kernel panic, will get reenabled at some point.
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ubuntu.widi.supported=1
 
 PRODUCT_PACKAGES += \
     libubuntu_application_api \
