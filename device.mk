@@ -86,7 +86,6 @@ PRODUCT_PACKAGES += \
 # Audio configuration
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-	$(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
 	$(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
 	$(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
 	$(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
@@ -281,11 +280,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Wakelock
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sensors.wl_dis=true
-
-# telepathy-ofono quirks
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.t-o.quirk.forcesink=sink.primary_output \
-    ro.t-o.quirk.forcesource=source.surround_sound_primary_input
 
 # droidmedia doesn't support HAL3 yet
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
