@@ -217,12 +217,12 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc \
     init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
     init.target.rc \
     init_setup_first_boot.sh \
     init_hcismd_up.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.qcom.usb.rc
+#   init.qcom.usb.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
@@ -288,6 +288,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Aethercast is currently disabled due to kernel panic, will get reenabled at some point.
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ubuntu.widi.supported=1
+
+# Ubuntu Touch Fix MTP connection
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/halium/usr/share/usbinit/setupusb:system/halium/usr/share/usbinit/setupusb \
+    $(LOCAL_PATH)/rootdir/system/halium/etc/init/mtp-state.conf:system/halium/etc/init/mtp-state.conf
 
 PRODUCT_PACKAGES += \
     libubuntu_application_api \
