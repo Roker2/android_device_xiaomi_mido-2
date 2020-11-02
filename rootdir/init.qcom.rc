@@ -198,7 +198,6 @@ on boot
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/blue/blink
-    chown system system /sys/class/leds/white/blink
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/blue/brightness
@@ -206,7 +205,6 @@ on boot
     chmod 0666 /sys/class/leds/red/blink
     chmod 0666 /sys/class/leds/green/blink
     chmod 0666 /sys/class/leds/blue/blink
-    chmod 0666 /sys/class/leds/white/blink
     chmod 0666 /sys/class/leds/red/brightness
     chmod 0666 /sys/class/leds/green/brightness
     chmod 0666 /sys/class/leds/blue/brightness
@@ -428,7 +426,6 @@ on property:sys.boot_completed=1
     chmod 0666 /sys/class/leds/red/blink
     chmod 0666 /sys/class/leds/green/blink
     chmod 0666 /sys/class/leds/blue/blink
-    chmod 0666 /sys/class/leds/white/blink
     chmod 0666 /sys/class/leds/red/brightness
     chmod 0666 /sys/class/leds/green/brightness
     chmod 0666 /sys/class/leds/blue/brightness
